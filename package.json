@@ -1,0 +1,59 @@
+{
+  "name": "tutorial-frontend-eth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:datachainlab/tutorial-frontend-eth.git",
+  "author": "toshihiko-okubo <toshihiko.okubo@speee.jp>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test:1": "jest 01-create-private-key.ts",
+    "test:2": "jest 02-send-eth-tx.ts",
+    "test:3": "jest 03-send-erc20-transfer-tx.ts",
+    "test:all": "jest",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "ganache:dev": "./sh/ganache.sh"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^4.11.6",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "@typescript-eslint/typescript-estree": "^3.0.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "ganache-cli": "^6.9.1",
+    "ganache-core": "^2.10.2",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "tsconfig-paths": "^3.9.0",
+    "typechain": "^1.0.5",
+    "typechain-target-web3-v1": "^1.0.4",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "bip32": "^2.0.5",
+    "bip39": "^3.0.2",
+    "bn.js": "^5.1.2",
+    "buffer": "^5.6.0",
+    "ethereumjs-common": "^1.5.1",
+    "ethereumjs-tx": "^2.1.2",
+    "ethereumjs-util": "^7.0.1",
+    "web3": "^1.2.8",
+    "web3-core": "^1.2.8",
+    "web3-core-helpers": "^1.2.8",
+    "web3-eth-contract": "^1.2.8",
+    "web3-utils": "^1.2.8"
+  },
+  "engines": {
+    "node": "^10.19.0",
+    "yarn": "^1.19.0"
+  }
+}

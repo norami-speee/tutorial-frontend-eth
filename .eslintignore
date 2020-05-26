@@ -3,6 +3,9 @@
 *.d.ts
 /dist/
 coverage/
+migrations/**/*.js
 node_modules/
+test/**/*.js
 typings/
 jest.config.js
+truffle-config.js

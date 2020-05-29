@@ -13,7 +13,9 @@
     "test:all": "jest",
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
-    "ganache:dev": "./sh/ganache.sh"
+    "ganache:dev": "./sh/ganache.sh",
+    "truffle:compile": "truffle compile",
+    "truffle:migrate": "truffle migrate"
   },
   "devDependencies": {
     "@types/bn.js": "^4.11.6",
@@ -39,6 +41,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^3.0.1",
     "bip32": "^2.0.5",
     "bip39": "^3.0.2",
     "bn.js": "^5.1.2",
@@ -46,7 +49,6 @@
     "ethereumjs-common": "^1.5.1",
     "ethereumjs-tx": "^2.1.2",
     "ethereumjs-util": "^7.0.1",
-    "openzeppelin-solidity": "git+https://github.com/OpenZeppelin/openzeppelin-contracts.git#v2.5.1",
     "truffle": "^5.1.27",
     "web3": "^1.2.8",
     "web3-core": "^1.2.8",

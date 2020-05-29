@@ -1,7 +1,11 @@
 import * as ethUtil from "ethereumjs-util";
 
-import { Address0, Mnemonic, PrivateKey0 } from "../consts";
-import { createPrivateKeyFromMnemonic, createPublicKeyFromMnemonic, createAddressFromPrivateKey } from "../utils";
+import {Address0, Mnemonic, PrivateKey0} from "../consts";
+import {
+  createAddressFromPrivateKey,
+  createPrivateKeyFromMnemonic,
+  createPublicKeyFromMnemonic
+} from "../utils";
 
 describe("create Private Key", () => {
   test("from Mnemonic", () => {

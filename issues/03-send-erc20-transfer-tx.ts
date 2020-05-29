@@ -55,7 +55,7 @@ describe("send-erc20-transfer-tx", () => {
       nonce: nonceHex,
       gasPrice: web3.utils.numberToHex(21000),　// min 21000 gas
       gasLimit: web3.utils.numberToHex(gas * 10), // 10倍しないとなぜかエラー
-      // to: Address1, // 送り先
+      to: contractAddress, // 送り先
       // value: '0x100000000000000000', // 金額
       data: encodedAbi,
     }

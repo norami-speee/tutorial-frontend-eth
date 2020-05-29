@@ -21,19 +21,19 @@ describe("send-erc20-transfer-tx", () => {
   const web3 = new Web3(provider);
   const contractAddress = contractJSON.networks[networkId].address;
   const contract = new web3.eth.Contract((contractJSON as any).abi, contractAddress, {
-    from : senderAddress,
+    from: senderAddress,
   });
   contract.events.Transfer({})
-  .on('data', (event:any) => {
-    console.log("data", event);
-    setTimeout(() => {
-      provider.disconnect(0, "close");
-    }, 1000)
-  })
-  .on("changed", (event:any) => {
-    console.log("changed", event)
-  })
-  .on("error", console.error);;
+    .on('data', (event: any) => {
+      console.log("data", event);
+      setTimeout(() => {
+        provider.disconnect(0, "close");
+      }, 1000)
+    })
+    .on("changed", (event: any) => {
+      console.log("changed", event)
+    })
+    .on("error", console.error);;
   test("send tx", async () => {
     console.log("start");
     console.log("contract.methods", contract.methods)

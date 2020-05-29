@@ -1,20 +1,16 @@
-pragma solidity >=0.4.21 <0.7.0;
+pragma solidity ^0.6.2;
 
-import "../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
-import "../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract ExampleToken is ERC20, ERC20Detailed {
-    string private _name = "TestContract";
-    string private _symbol = "TC";
-    uint8 private _decimals = 18;
 
-    address account = msg.sender;
-    uint value = 100000000000000000000;
+contract ExampleToken is ERC20 {
+  string private _name = "ExampleToken";
+  string private _symbol = "EXP";
+  uint8 private _decimals = 1;
 
-    constructor() ERC20Detailed( _name, _symbol, _decimals) public {
-        _mint(account, value);
-    }
-    function mint(address account, uint256 amount) public {
-        return _mint(account, amount);
-    }
+  uint256 value = 10000;
+
+  constructor() public ERC20(_name, _symbol) {
+    _mint(msg.sender, value);
+  }
 }
